@@ -9,6 +9,8 @@ def df_format(df):
         df[c] = df[c].astype("category")
     
     #Changer les types int64 en int64, int32, int16 ou int8 suivant le max
+
+    
     int_cols = list(df.select_dtypes("integer").columns)
     encodings = [np.int8, np.int16, np.int32]
     for c in int_cols:
